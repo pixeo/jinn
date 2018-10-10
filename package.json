@@ -2,7 +2,6 @@
     "name": "@pixeoweb/jinn",
     "version": "0.1.1",
     "description": "",
-    "private": true,
     "scripts": {
         "build": "cross-env NODE_ENV=development node_modules/tailwindcss/lib/cli.js build ./src/styles.css -c ./tailwind.js -o ./dist/styles.css"
     },
