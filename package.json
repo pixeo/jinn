@@ -1,12 +1,12 @@
 {
     "name": "@pixeoweb/jinn",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "",
     "scripts": {
         "build": "cross-env NODE_ENV=development node_modules/tailwindcss/lib/cli.js build ./src/styles.css -c ./tailwind.js -o ./dist/styles.css"
     },
     "devDependencies": {
-        "color": "3.0.0",
+        "color": "^0.11.4",
         "cross-env": "^5.2",
         "lodash": "^4.17.10",
         "tailwindcss": "^0.6.6"

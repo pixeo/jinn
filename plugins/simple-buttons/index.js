@@ -108,14 +108,14 @@ module.exports = function (options) {
             color: colorOptions.text,
             '&:focus': {
               outline: 0,
-              boxShadow: `0 0 0 .2em ${Color(colorOptions.background).alpha(.5).rgb().toString()}`,
+              boxShadow: `0 0 0 .2em ${Color(colorOptions.background).alpha(.5).rgbString()}`,
             },
             '&:hover': {
-              backgroundColor: _.get(colorOptions, 'hoverBackground', Color(colorOptions.background).darken(0.1).hex().toString()),
+              backgroundColor: _.get(colorOptions, 'hoverBackground', Color(colorOptions.background).darken(0.1).hexString()),
               color: _.get(colorOptions, 'hoverText', colorOptions.text),
             },
             '&:active': {
-              backgroundColor: _.get(colorOptions, 'activeBackground', Color(colorOptions.background).darken(0.1).hex().toString()),
+              backgroundColor: _.get(colorOptions, 'activeBackground', Color(colorOptions.background).darken(0.1).hexString()),
               color: _.get(colorOptions, 'activeText', colorOptions.text),
             }
           }

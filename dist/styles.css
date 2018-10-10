@@ -519,16 +519,6 @@ ul {
 }
 
 /**
- * Suppress the focus outline on elements that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
- */
-
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
-/**
  * Tailwind custom reset styles
  */
 
@@ -589,6 +579,7 @@ textarea {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -608,6 +599,10 @@ textarea::placeholder {
 button,
 [role=button] {
   cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 .container {
@@ -695,12 +690,12 @@ button,
 }
 
 .btn-black:hover {
-  background-color: #1f252a;
+  background-color: #1e2429;
   color: #fff;
 }
 
 .btn-black:active {
-  background-color: #1f252a;
+  background-color: #1e2429;
   color: #fff;
 }
 
@@ -715,12 +710,12 @@ button,
 }
 
 .btn-grey:hover {
-  background-color: #a1afbc;
+  background-color: #a0adba;
   color: #22292f;
 }
 
 .btn-grey:active {
-  background-color: #a1afbc;
+  background-color: #a0adba;
   color: #22292f;
 }
 
@@ -735,12 +730,12 @@ button,
 }
 
 .btn-red:hover {
-  background-color: #d9221d;
+  background-color: #dc241e;
   color: #fff;
 }
 
 .btn-red:active {
-  background-color: #d9221d;
+  background-color: #dc241e;
   color: #fff;
 }
 
@@ -755,12 +750,12 @@ button,
 }
 
 .btn-orange:hover {
-  background-color: #f58921;
+  background-color: #f58c24;
   color: #fff;
 }
 
 .btn-orange:active {
-  background-color: #f58921;
+  background-color: #f58c24;
   color: #fff;
 }
 
@@ -775,12 +770,12 @@ button,
 }
 
 .btn-yellow:hover {
-  background-color: #ffea29;
+  background-color: #ffea2e;
   color: #453411;
 }
 
 .btn-yellow:active {
-  background-color: #ffea29;
+  background-color: #ffea2e;
   color: #453411;
 }
 
@@ -795,12 +790,12 @@ button,
 }
 
 .btn-green:hover {
-  background-color: #32ae67;
+  background-color: #32ae66;
   color: #fff;
 }
 
 .btn-green:active {
-  background-color: #32ae67;
+  background-color: #32ae66;
   color: #fff;
 }
 
@@ -815,12 +810,12 @@ button,
 }
 
 .btn-teal:hover {
-  background-color: #3fb3a8;
+  background-color: #40b5a9;
   color: #fff;
 }
 
 .btn-teal:active {
-  background-color: #3fb3a8;
+  background-color: #40b5a9;
   color: #fff;
 }
 
@@ -835,12 +830,12 @@ button,
 }
 
 .btn-blue:hover {
-  background-color: #2483d1;
+  background-color: #2383d1;
   color: #fff;
 }
 
 .btn-blue:active {
-  background-color: #2483d1;
+  background-color: #2383d1;
   color: #fff;
 }
 
@@ -855,12 +850,12 @@ button,
 }
 
 .btn-indigo:hover {
-  background-color: #4e5fc5;
+  background-color: #4e60c6;
   color: #fff;
 }
 
 .btn-indigo:active {
-  background-color: #4e5fc5;
+  background-color: #4e60c6;
   color: #fff;
 }
 
@@ -875,12 +870,12 @@ button,
 }
 
 .btn-purple:hover {
-  background-color: #8346dd;
+  background-color: #8246dd;
   color: #fff;
 }
 
 .btn-purple:active {
-  background-color: #8346dd;
+  background-color: #8246dd;
   color: #fff;
 }
 
@@ -895,12 +890,12 @@ button,
 }
 
 .btn-pink:hover {
-  background-color: #f44c84;
+  background-color: #f44e85;
   color: #fff;
 }
 
 .btn-pink:active {
-  background-color: #f44c84;
+  background-color: #f44e85;
   color: #fff;
 }
 
@@ -1688,6 +1683,14 @@ button,
 
 .bg-contain {
   background-size: contain;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.border-separate {
+  border-collapse: separate;
 }
 
 .border-transparent {
@@ -3574,6 +3577,14 @@ button,
   opacity: 1;
 }
 
+.outline-none {
+  outline: 0;
+}
+
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -3596,6 +3607,22 @@ button,
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .overflow-x-scroll {
@@ -3964,6 +3991,14 @@ button,
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .text-left {
@@ -7534,6 +7569,22 @@ button,
     overflow-y: auto;
   }
 
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .sm\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .sm\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .sm\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .sm\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -7892,6 +7943,14 @@ button,
 
   .sm\:shadow-none {
     box-shadow: none;
+  }
+
+  .sm\:table-auto {
+    table-layout: auto;
+  }
+
+  .sm\:table-fixed {
+    table-layout: fixed;
   }
 
   .sm\:text-left {
@@ -11447,6 +11506,22 @@ button,
     overflow-y: auto;
   }
 
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .md\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .md\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -11805,6 +11880,14 @@ button,
 
   .md\:shadow-none {
     box-shadow: none;
+  }
+
+  .md\:table-auto {
+    table-layout: auto;
+  }
+
+  .md\:table-fixed {
+    table-layout: fixed;
   }
 
   .md\:text-left {
@@ -15360,6 +15443,22 @@ button,
     overflow-y: auto;
   }
 
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .lg\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .lg\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .lg\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -15718,6 +15817,14 @@ button,
 
   .lg\:shadow-none {
     box-shadow: none;
+  }
+
+  .lg\:table-auto {
+    table-layout: auto;
+  }
+
+  .lg\:table-fixed {
+    table-layout: fixed;
   }
 
   .lg\:text-left {
@@ -19273,6 +19380,22 @@ button,
     overflow-y: auto;
   }
 
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .xl\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .xl\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .xl\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -19631,6 +19754,14 @@ button,
 
   .xl\:shadow-none {
     box-shadow: none;
+  }
+
+  .xl\:table-auto {
+    table-layout: auto;
+  }
+
+  .xl\:table-fixed {
+    table-layout: fixed;
   }
 
   .xl\:text-left {
