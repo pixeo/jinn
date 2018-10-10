@@ -1,0 +1,18 @@
+{
+    "name": "@pixeoweb/tailwind-plugins",
+    "version": "0.1.1",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "build": "cross-env NODE_ENV=development node_modules/tailwindcss/lib/cli.js build ./src/styles.css -c ./tailwind.js -o ./dist/styles.css"
+    },
+    "devDependencies": {
+        "color": "^3.0.0",
+        "cross-env": "^5.1",
+        "lodash": "^4.17.5",
+        "tailwindcss": "^0.6.6"
+    },
+    "postcss": {
+        "tailwindcss": "./tailwind.js"
+    }
+}
