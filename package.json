@@ -6,10 +6,10 @@
         "build": "cross-env NODE_ENV=development node_modules/tailwindcss/lib/cli.js build ./src/styles.css -c ./tailwind.js -o ./dist/styles.css"
     },
     "devDependencies": {
-        "color": "^0.11.4",
+        "color": "^3.1.0",
         "cross-env": "^5.2",
         "lodash": "^4.17.10",
-        "tailwindcss": "^0.6.6"
+        "tailwindcss": "^0.7.4"
     },
     "postcss": {
         "tailwindcss": "./tailwind.js"

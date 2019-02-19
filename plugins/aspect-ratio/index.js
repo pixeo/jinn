@@ -7,7 +7,7 @@ function defaultRatios() {
 }
 
 module.exports = function({ ratios, variants }) {
-    ratios = _.defaults(ratios, defaultOptions());
+    ratios = _.defaults(ratios, defaultRatios());
 
     return function({ addUtilities, e }) {
         const utilities = _.map(ratios, ([width, height], name) => ({

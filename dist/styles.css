@@ -1,17 +1,15 @@
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
   line-height: 1.15; /* 1 */
-      -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -19,7 +17,7 @@ html {
    ========================================================================== */
 
 /**
- * Remove the margin in all browsers (opinionated).
+ * Remove the margin in all browsers.
  */
 
 body {
@@ -27,15 +25,10 @@ body {
 }
 
 /**
- * Add the correct display in IE 9-.
+ * Render the `main` element consistently in IE.
  */
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
+main {
   display: block;
 }
 
@@ -51,26 +44,6 @@ h1 {
 
 /* Grouping content
    ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-figcaption,
-figure,
-main {
-  /* 1 */
-  display: block;
-}
-
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -97,33 +70,23 @@ pre {
    ========================================================================== */
 
 /**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * Remove the gray background on active links in IE 10.
  */
 
 a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
+  background-color: transparent;
 }
 
 /**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-  font-weight: inherit;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -145,23 +108,6 @@ kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-  background-color: #ff0;
-  color: #000;
 }
 
 /**
@@ -197,44 +143,18 @@ sup {
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-audio,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Remove the border on images inside links in IE 10-.
+ * Remove the border on images inside links in IE 10.
  */
 
 img {
   border-style: none;
 }
 
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
 /* Forms
    ========================================================================== */
 
 /**
- * 1. Change the font styles in all browsers (opinionated).
+ * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
 
@@ -243,7 +163,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -272,17 +192,14 @@ select {
 }
 
 /**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+ * Correct the inability to style clickable types in iOS and Safari.
  */
 
 button,
-html [type="button"],
-/* 1 */
+[type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: button;
 }
 
 /**
@@ -333,17 +250,15 @@ legend {
 }
 
 /**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
 progress {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  vertical-align: baseline;
 }
 
 /**
- * Remove the default vertical scrollbar in IE.
+ * Remove the default vertical scrollbar in IE 10+.
  */
 
 textarea {
@@ -351,8 +266,8 @@ textarea {
 }
 
 /**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
  */
 
 [type="checkbox"],
@@ -381,10 +296,9 @@ textarea {
 }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -403,13 +317,10 @@ textarea {
    ========================================================================== */
 
 /*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
+ * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
-details,
-/* 1 */
-menu {
+details {
   display: block;
 }
 
@@ -421,30 +332,19 @@ summary {
   display: list-item;
 }
 
-/* Scripting
+/* Misc
    ========================================================================== */
 
 /**
- * Add the correct display in IE 9-.
- */
-
-canvas {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in IE.
+ * Add the correct display in IE 10+.
  */
 
 template {
   display: none;
 }
 
-/* Hidden
-   ========================================================================== */
-
 /**
- * Add the correct display in IE 10-.
+ * Add the correct display in IE 10.
  */
 
 [hidden] {
@@ -560,19 +460,6 @@ img {
   border-style: solid;
 }
 
-/**
- * Temporary reset for a change introduced in Chrome 62 but now reverted.
- *
- * We can remove this when the reversion is in a normal Chrome release.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  border-radius: 0;
-}
-
 textarea {
   resize: vertical;
 }
@@ -582,12 +469,22 @@ img {
   height: auto;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: inherit;
+  opacity: .5;
 }
 
 input::placeholder,
@@ -597,7 +494,7 @@ textarea::placeholder {
 }
 
 button,
-[role=button] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -670,13 +567,27 @@ table {
 }
 
 .btn-white:hover {
-  background-color: #e6e6e6;
   color: #22292f;
 }
 
+.btn-white:hover backgroundColor {
+  model: hsl;
+  color: 0;
+  color: 0;
+  color: 90px;
+  valpha: 1px;
+}
+
 .btn-white:active {
-  background-color: #e6e6e6;
   color: #22292f;
+}
+
+.btn-white:active backgroundColor {
+  model: hsl;
+  color: 0;
+  color: 0;
+  color: 90px;
+  valpha: 1px;
 }
 
 .btn-black {
@@ -690,13 +601,27 @@ table {
 }
 
 .btn-black:hover {
-  background-color: #1e2429;
   color: #fff;
 }
 
+.btn-black:hover backgroundColor {
+  model: hsl;
+  color: 207.69230769230774px;
+  color: 16.049382716049386px;
+  color: 14.294117647058822px;
+  valpha: 1px;
+}
+
 .btn-black:active {
-  background-color: #1e2429;
   color: #fff;
+}
+
+.btn-black:active backgroundColor {
+  model: hsl;
+  color: 207.69230769230774px;
+  color: 16.049382716049386px;
+  color: 14.294117647058822px;
+  valpha: 1px;
 }
 
 .btn-grey {
@@ -710,13 +635,27 @@ table {
 }
 
 .btn-grey:hover {
-  background-color: #a0adba;
   color: #22292f;
 }
 
+.btn-grey:hover backgroundColor {
+  model: hsl;
+  color: 210px;
+  color: 16.393442622950833px;
+  color: 68.47058823529412px;
+  valpha: 1px;
+}
+
 .btn-grey:active {
-  background-color: #a0adba;
   color: #22292f;
+}
+
+.btn-grey:active backgroundColor {
+  model: hsl;
+  color: 210px;
+  color: 16.393442622950833px;
+  color: 68.47058823529412px;
+  valpha: 1px;
 }
 
 .btn-red {
@@ -730,13 +669,27 @@ table {
 }
 
 .btn-red:hover {
-  background-color: #dc241e;
   color: #fff;
 }
 
+.btn-red:hover backgroundColor {
+  model: hsl;
+  color: 1.6666666666666856px;
+  color: 76.27118644067795px;
+  color: 48.35294117647059px;
+  valpha: 1px;
+}
+
 .btn-red:active {
-  background-color: #dc241e;
   color: #fff;
+}
+
+.btn-red:active backgroundColor {
+  model: hsl;
+  color: 1.6666666666666856px;
+  color: 76.27118644067795px;
+  color: 48.35294117647059px;
+  valpha: 1px;
 }
 
 .btn-orange {
@@ -750,13 +703,27 @@ table {
 }
 
 .btn-orange:hover {
-  background-color: #f58c24;
   color: #fff;
 }
 
+.btn-orange:hover backgroundColor {
+  model: hsl;
+  color: 29.508196721311492px;
+  color: 91.044776119403px;
+  color: 54.529411764705884px;
+  valpha: 1px;
+}
+
 .btn-orange:active {
-  background-color: #f58c24;
   color: #fff;
+}
+
+.btn-orange:active backgroundColor {
+  model: hsl;
+  color: 29.508196721311492px;
+  color: 91.044776119403px;
+  color: 54.529411764705884px;
+  valpha: 1px;
 }
 
 .btn-yellow {
@@ -770,13 +737,27 @@ table {
 }
 
 .btn-yellow:hover {
-  background-color: #ffea2e;
   color: #453411;
 }
 
+.btn-yellow:hover backgroundColor {
+  model: hsl;
+  color: 54.033149171270736px;
+  color: 100px;
+  color: 58.05882352941177px;
+  valpha: 1px;
+}
+
 .btn-yellow:active {
-  background-color: #ffea2e;
   color: #453411;
+}
+
+.btn-yellow:active backgroundColor {
+  model: hsl;
+  color: 54.033149171270736px;
+  color: 100px;
+  color: 58.05882352941177px;
+  valpha: 1px;
 }
 
 .btn-green {
@@ -790,13 +771,27 @@ table {
 }
 
 .btn-green:hover {
-  background-color: #32ae66;
   color: #fff;
 }
 
+.btn-green:hover backgroundColor {
+  model: hsl;
+  color: 145.4014598540146px;
+  color: 55.020080321285135px;
+  color: 43.94117647058823px;
+  valpha: 1px;
+}
+
 .btn-green:active {
-  background-color: #32ae66;
   color: #fff;
+}
+
+.btn-green:active backgroundColor {
+  model: hsl;
+  color: 145.4014598540146px;
+  color: 55.020080321285135px;
+  color: 43.94117647058823px;
+  valpha: 1px;
 }
 
 .btn-teal {
@@ -810,13 +805,27 @@ table {
 }
 
 .btn-teal:hover {
-  background-color: #40b5a9;
   color: #fff;
 }
 
+.btn-teal:hover backgroundColor {
+  model: hsl;
+  color: 174.26086956521738px;
+  color: 47.71784232365145px;
+  color: 47.47058823529412px;
+  valpha: 1px;
+}
+
 .btn-teal:active {
-  background-color: #40b5a9;
   color: #fff;
+}
+
+.btn-teal:active backgroundColor {
+  model: hsl;
+  color: 174.26086956521738px;
+  color: 47.71784232365145px;
+  color: 47.47058823529412px;
+  valpha: 1px;
 }
 
 .btn-blue {
@@ -830,13 +839,27 @@ table {
 }
 
 .btn-blue:hover {
-  background-color: #2383d1;
   color: #fff;
 }
 
+.btn-blue:hover backgroundColor {
+  model: hsl;
+  color: 207.1428571428571px;
+  color: 70.58823529411765px;
+  color: 48px;
+  valpha: 1px;
+}
+
 .btn-blue:active {
-  background-color: #2383d1;
   color: #fff;
+}
+
+.btn-blue:active backgroundColor {
+  model: hsl;
+  color: 207.1428571428571px;
+  color: 70.58823529411765px;
+  color: 48px;
+  valpha: 1px;
 }
 
 .btn-indigo {
@@ -850,13 +873,27 @@ table {
 }
 
 .btn-indigo:hover {
-  background-color: #4e60c6;
   color: #fff;
 }
 
+.btn-indigo:hover backgroundColor {
+  model: hsl;
+  color: 231.3461538461538px;
+  color: 50.980392156862756px;
+  color: 54px;
+  valpha: 1px;
+}
+
 .btn-indigo:active {
-  background-color: #4e60c6;
   color: #fff;
+}
+
+.btn-indigo:active backgroundColor {
+  model: hsl;
+  color: 231.3461538461538px;
+  color: 50.980392156862756px;
+  color: 54px;
+  valpha: 1px;
 }
 
 .btn-purple {
@@ -870,13 +907,27 @@ table {
 }
 
 .btn-purple:hover {
-  background-color: #8246dd;
   color: #fff;
 }
 
+.btn-purple:hover backgroundColor {
+  model: hsl;
+  color: 264.18604651162786px;
+  color: 68.98395721925132px;
+  color: 56.99999999999999px;
+  valpha: 1px;
+}
+
 .btn-purple:active {
-  background-color: #8246dd;
   color: #fff;
+}
+
+.btn-purple:active backgroundColor {
+  model: hsl;
+  color: 264.18604651162786px;
+  color: 68.98395721925132px;
+  color: 56.99999999999999px;
+  valpha: 1px;
 }
 
 .btn-pink {
@@ -890,13 +941,27 @@ table {
 }
 
 .btn-pink:hover {
-  background-color: #f44e85;
   color: #fff;
 }
 
+.btn-pink:hover backgroundColor {
+  model: hsl;
+  color: 339.8540145985402px;
+  color: 88.38709677419358px;
+  color: 62.64705882352941px;
+  valpha: 1px;
+}
+
 .btn-pink:active {
-  background-color: #f44e85;
   color: #fff;
+}
+
+.btn-pink:active backgroundColor {
+  model: hsl;
+  color: 339.8540145985402px;
+  color: 88.38709677419358px;
+  color: 62.64705882352941px;
+  valpha: 1px;
 }
 
 .alert {
@@ -1022,7 +1087,9 @@ table {
 }
 
 .appearance-none {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .bg-fixed {
@@ -2762,15 +2829,15 @@ table {
 }
 
 .flex-1 {
-  flex: 1;
+  flex: 1 1 0%;
 }
 
 .flex-auto {
-  flex: auto;
+  flex: 1 1 auto;
 }
 
 .flex-initial {
-  flex: initial;
+  flex: 0 1 auto;
 }
 
 .flex-none {
@@ -3906,6 +3973,7 @@ table {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -4742,11 +4810,17 @@ table {
 }
 
 .select-none {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .select-text {
-  user-select: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 .align-baseline {
@@ -4956,23 +5030,28 @@ table {
 }
 
 .object-contain {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .object-fill {
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .object-none {
-  object-fit: none;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .object-scale {
-  object-fit: scale-down;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .aspect-ratio-square {
@@ -4998,7 +5077,9 @@ table {
   }
 
   .sm\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .sm\:bg-fixed {
@@ -6730,15 +6811,15 @@ table {
   }
 
   .sm\:flex-1 {
-    flex: 1;
+    flex: 1 1 0%;
   }
 
   .sm\:flex-auto {
-    flex: auto;
+    flex: 1 1 auto;
   }
 
   .sm\:flex-initial {
-    flex: initial;
+    flex: 0 1 auto;
   }
 
   .sm\:flex-none {
@@ -7866,6 +7947,7 @@ table {
   }
 
   .sm\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -8694,11 +8776,17 @@ table {
   }
 
   .sm\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .sm\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .sm\:align-baseline {
@@ -8908,23 +8996,28 @@ table {
   }
 
   .sm\:object-contain {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .sm\:object-cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .sm\:object-fill {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .sm\:object-none {
-    object-fit: none;
+    -o-object-fit: none;
+       object-fit: none;
   }
 
   .sm\:object-scale {
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
 }
 
@@ -8935,7 +9028,9 @@ table {
   }
 
   .md\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .md\:bg-fixed {
@@ -10667,15 +10762,15 @@ table {
   }
 
   .md\:flex-1 {
-    flex: 1;
+    flex: 1 1 0%;
   }
 
   .md\:flex-auto {
-    flex: auto;
+    flex: 1 1 auto;
   }
 
   .md\:flex-initial {
-    flex: initial;
+    flex: 0 1 auto;
   }
 
   .md\:flex-none {
@@ -11803,6 +11898,7 @@ table {
   }
 
   .md\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -12631,11 +12727,17 @@ table {
   }
 
   .md\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .md\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .md\:align-baseline {
@@ -12845,23 +12947,28 @@ table {
   }
 
   .md\:object-contain {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .md\:object-cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:object-fill {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .md\:object-none {
-    object-fit: none;
+    -o-object-fit: none;
+       object-fit: none;
   }
 
   .md\:object-scale {
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
 }
 
@@ -12872,7 +12979,9 @@ table {
   }
 
   .lg\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .lg\:bg-fixed {
@@ -14604,15 +14713,15 @@ table {
   }
 
   .lg\:flex-1 {
-    flex: 1;
+    flex: 1 1 0%;
   }
 
   .lg\:flex-auto {
-    flex: auto;
+    flex: 1 1 auto;
   }
 
   .lg\:flex-initial {
-    flex: initial;
+    flex: 0 1 auto;
   }
 
   .lg\:flex-none {
@@ -15740,6 +15849,7 @@ table {
   }
 
   .lg\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -16568,11 +16678,17 @@ table {
   }
 
   .lg\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .lg\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .lg\:align-baseline {
@@ -16782,23 +16898,28 @@ table {
   }
 
   .lg\:object-contain {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .lg\:object-cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .lg\:object-fill {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .lg\:object-none {
-    object-fit: none;
+    -o-object-fit: none;
+       object-fit: none;
   }
 
   .lg\:object-scale {
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
 }
 
@@ -16809,7 +16930,9 @@ table {
   }
 
   .xl\:appearance-none {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
   }
 
   .xl\:bg-fixed {
@@ -18541,15 +18664,15 @@ table {
   }
 
   .xl\:flex-1 {
-    flex: 1;
+    flex: 1 1 0%;
   }
 
   .xl\:flex-auto {
-    flex: auto;
+    flex: 1 1 auto;
   }
 
   .xl\:flex-initial {
-    flex: initial;
+    flex: 0 1 auto;
   }
 
   .xl\:flex-none {
@@ -19677,6 +19800,7 @@ table {
   }
 
   .xl\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -20505,11 +20629,17 @@ table {
   }
 
   .xl\:select-none {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   .xl\:select-text {
-    user-select: text;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 
   .xl\:align-baseline {
@@ -20719,22 +20849,27 @@ table {
   }
 
   .xl\:object-contain {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .xl\:object-cover {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .xl\:object-fill {
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .xl\:object-none {
-    object-fit: none;
+    -o-object-fit: none;
+       object-fit: none;
   }
 
   .xl\:object-scale {
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
 }
